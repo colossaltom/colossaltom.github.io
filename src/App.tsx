@@ -300,12 +300,17 @@ function App() {
                 </Parallax>
             </div>
             </div>
-        <Helmet><script>var scroll = new SmoothScroll('a[href*="#"]')</script></Helmet>
         </main>
         <footer>
             <a style={{color:"black"}} href="https://www.vecteezy.com/free-photos/ocean">Ocean Stock photos by Vecteezy</a>
         </footer>
-    </div></ParallaxProvider>
+    </div>
+      <Helmet>
+        <script>
+            var scroll = new SmoothScroll('a[href*="#"]');
+        </script> 
+      </Helmet>
+</ParallaxProvider>
     
     </>)
 

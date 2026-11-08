@@ -184,12 +184,16 @@
 }
 
 
+
+
 body {
   background-image: url('./assets/vecteezy_beautiful-ocean-with-clouds-on-blue-sky_2142871.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  width: min(100% - 32px, 1200px);
+  margin-inline: auto;
 }
 
 .txtBox {
@@ -231,6 +235,11 @@ main a, article {
   }
 }
 
+a {
+  color:var(--text-h);
+  text-decoration: none;
+}
+
 article {
   display:block;
 }
@@ -256,6 +265,7 @@ p {
 
 ul {
   text-indent: 0;
+  text-align: left;
 }
 
 caption {
@@ -276,3 +286,6 @@ h3 {
   width: unset;
 }
 
+#root {
+  border: 0;
+}

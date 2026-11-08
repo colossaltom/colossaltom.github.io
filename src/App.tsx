@@ -1,17 +1,24 @@
-//import { useState } from 'react'
-import { Helmet } from 'react-helmet'
-import '../node_modules/smooth-scroll/dist/smooth-scroll.polyfills.js';
+//import React from 'react';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
+import SmoothScroll from 'smooth-scroll'
+//import '../node_modules/smooth-scroll/dist/smooth-scroll.polyfills.js';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+
 
 import './App.css'
+
 
 import imgGithub   from './assets/github-142-svgrepo-com.svg'
 import imgLinkedin from './assets/linkedin-svgrepo-com.svg'
 //import imgIndeed   from './assets/indeed-svgrepo-com.svg'
 
+
 //import bg from './assets/Picture__87.jpg'
 import imgMe from './assets/about/imgMe.jpg'
 import imgLogo from './assets/about/251112 resume logo web.png'
+
 
 import imgLeek       from './assets/dev/com.live2d.miku/light-icon web.gif'
 import imgMiku       from './assets/dev/com.live2d.miku/Screenshot.png'
@@ -37,6 +44,17 @@ import imgBrandThumb from './assets/art/Branding/3 Web.jpg'
 import imgBrand1 from './assets/art/Branding/boards web.jpg'
 import imgBrand2 from './assets/art/Branding/boards2 web.jpg'
 import imgBrand3 from './assets/art/Branding/boards3 web.jpg'
+
+
+
+
+
+window.onload=()=>{
+    var scroll = new SmoothScroll('a[href*="#"]');
+}
+
+
+
 
 
 
@@ -70,21 +88,20 @@ const mediums=[
          postings:[
             {image:imgProof, text:(<>
                 <caption>Created entirely using Adobe ExtendScript (ES3 +XML)</caption>
-                <p>This was a major side project that adds an input form into illustrator that can import data directly from xml and css. It was a project that I picked up and learned by completely rewriting it from scratch entirely in Adobe ExtendScript. It drastically reduced the number of errors and time spent entering in data by hand. Some of the best features include:
-                    <ul>
-                        <li>Import that excepts xml or css formatted saves from external software / exports a save history and defaults</li>
-                        <li>Automatic building of part folder including spec files and artwork</li>
-                        <li>Modular to allow multiple layouts and adding additional setup scripts into one place</li>
-                        <li>Loads csv data to allow non technical users to add in custom materials in an easy to understand way</li>
-                        <li>Layout is determined via layer names in a template document so graphic users can edit layouts</li>
-                        <li>Warnings and errors help users to track out of range specs</li>
-                        <li>Number boxes allow arithmetic using any measurement type</li>
-                        <li>Unlimited number of parts created in parallel</li>
-                        <li>Real time artboard updates to see what the document looks like</li>
-                        <li>Commandline mode to allow for full automation in the future</li>
-                        <li>Automatic detection of several known bugs in Adobe software on run</li>
-                    </ul>
-                </p>
+                <p>This was a major side project that adds an input form into illustrator that can import data directly from xml and css. It was a project that I picked up and learned by completely rewriting it from scratch entirely in Adobe ExtendScript. It drastically reduced the number of errors and time spent entering in data by hand. Some of the best features include:</p>
+                <ul>
+                    <li>Import that excepts xml or css formatted saves from external software / exports a save history and defaults</li>
+                    <li>Automatic building of part folder including spec files and artwork</li>
+                    <li>Modular to allow multiple layouts and adding additional setup scripts into one place</li>
+                    <li>Loads csv data to allow non technical users to add in custom materials in an easy to understand way</li>
+                    <li>Layout is determined via layer names in a template document so graphic users can edit layouts</li>
+                    <li>Warnings and errors help users to track out of range specs</li>
+                    <li>Number boxes allow arithmetic using any measurement type</li>
+                    <li>Unlimited number of parts created in parallel</li>
+                    <li>Real time artboard updates to see what the document looks like</li>
+                    <li>Commandline mode to allow for full automation in the future</li>
+                    <li>Automatic detection of several known bugs in Adobe software on run</li>
+                </ul>
             </>)},
         ]},
         {name:"Barcode Generator",
@@ -101,14 +118,13 @@ const mediums=[
             {image:imgJobs, text:(<>
                 <caption>Fast action menu</caption>
                 <p>This is a collection of automated actions built for specific tasks grouped together using the default shortcuts.app selection allowing them to be run from inside of unlimited job folders all at once often saving hundreds of clicks in menuing translating to hours of work. These actions include a mix of JXA, AppleScript, bash, and Adobe ExtendScript and follows a specified job folder structure.</p>
-                <p>Other automated tasks include:
-                    <ul>
-                        <li>A replacement of legacy variable software that exports to a press proprietary binary format</li>
-                        <li>Preflighting pdf hot folder that exports a spec and compatibility report along with basic prepress changes</li>
-                        <li>Created an Illustrator function to add in the ability to check for missing fonts and existing color books</li>
-                        <li>Node solution for organizing retained jobs, eliminating duplicate, and making a windows compatible fast search index</li>
-                    </ul>
-                </p>
+                <p>Other automated tasks include:</p>
+                <ul>
+                    <li>A replacement of legacy variable software that exports to a press proprietary binary format</li>
+                    <li>Preflighting pdf hot folder that exports a spec and compatibility report along with basic prepress changes</li>
+                    <li>Created an Illustrator function to add in the ability to check for missing fonts and existing color books</li>
+                    <li>Node solution for organizing retained jobs, eliminating duplicate, and making a windows compatible fast search index</li>
+                </ul>
             </>)},
         ]},
         {name:"Live2d in Illustrator",
@@ -197,27 +213,9 @@ const mediums=[
 ]
 
 
-/*interface posting {
-    name:string;
-    image:string;
-    text:any;
-}
-interface project {
-    name:string;
-    image:string;
-    posting:Array<posting>
-}
-interface medium {
-    name:string;
-    projects:Array<project>;
-}*/
-
-
-    //<normalize className="css"></normalize>
 
 
 function App() {
-    //const [count, setCount] = useState(0)
 
     let theHTML = (<>
     <ParallaxProvider><div>
@@ -233,7 +231,7 @@ function App() {
             <div id="nav" style={{float:"left", width:"10%", minWidth:"100px", height:"100%"}}>
                 <Parallax shouldAlwaysCompleteAnimation={true} translateY={[0, 9900]} className='txtBox' >
                 {/*<Parallax translateY={[-10000, 5000]} className='txtBox' >*/}
-                    {mediums.map ((medium)=><a href={"#"+medium.name}><h2>{medium.name}</h2><br /></a>)}
+                    {mediums.map ((medium)=><a key={medium.name} href={"#"+medium.name}><h2>{medium.name}</h2><br /></a>)}
                     <a href="#top" style={{display:'flex'}}><h2>TOP &uarr;</h2><br /></a>
                 </Parallax>
             </div>
@@ -251,8 +249,8 @@ function App() {
                             <hr />
                             {medium.projects.map ((project)=>
                             {
-                                return (<a href={"#"+project.name} style={{display:"flex"}}>
-                                    <img src={project.image} style={{width:"60%"}} />
+                                return (<a key={project.name} href={"#"+project.name} style={{display:"flex"}}>
+                                    <LazyLoadImage effect='blur' src={project.image} style={{width:"60%"}} />
                                     <h5>{project.name}</h5>
                                 </a>)
                             })}
@@ -285,7 +283,7 @@ function App() {
                                     {
                                         return (
                                         <>
-                                            <img src={posting.image} style={{position:"relative", clear:"both", maxHeight:"75vh", width:"auto", maxWidth:"stretch"}} />
+                                            <LazyLoadImage effect='blur' src={posting.image} style={{position:"relative", clear:"both", maxHeight:"75vh", maxWidth:"stretch"}} />
                                             <section>
                                                 {posting.text}
                                                 <hr style={{border:"2px solid #ffffff29", borderRadius:"2px", width:"100%"}} />
@@ -305,11 +303,6 @@ function App() {
             <a style={{color:"black"}} href="https://www.vecteezy.com/free-photos/ocean">Ocean Stock photos by Vecteezy</a>
         </footer>
     </div>
-      <Helmet>
-        <script>
-            var scroll = new SmoothScroll('a[href*="#"]');
-        </script> 
-      </Helmet>
 </ParallaxProvider>
     
     </>)

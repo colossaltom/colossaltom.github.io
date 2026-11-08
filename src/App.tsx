@@ -50,7 +50,7 @@ import imgBrand3 from './assets/art/Branding/boards3 web.jpg'
 
 
 window.onload=()=>{
-    var scroll = new SmoothScroll('a[href*="#"]');
+    var scroll = new SmoothScroll('a[href*="#"]'); scroll;
 }
 
 

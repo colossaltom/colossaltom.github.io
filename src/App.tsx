@@ -90,7 +90,7 @@ const mediums=[
                 <caption>Created entirely using Adobe ExtendScript (ES3 +XML)</caption>
                 <p>This was a major side project that adds an input form into illustrator that can import data directly from xml and css. It was a project that I picked up and learned by completely rewriting it from scratch entirely in Adobe ExtendScript. It drastically reduced the number of errors and time spent entering in data by hand. Some of the best features include:</p>
                 <ul>
-                    <li>Import that excepts xml or css formatted saves from external software / exports a save history and defaults</li>
+                    <li>Import that accepts xml or css formatted saves from external software / exports a save history and defaults</li>
                     <li>Automatic building of part folder including spec files and artwork</li>
                     <li>Modular to allow multiple layouts and adding additional setup scripts into one place</li>
                     <li>Loads csv data to allow non technical users to add in custom materials in an easy to understand way</li>
@@ -132,7 +132,7 @@ const mediums=[
          postings:[
             {image:imgMiku, text:(<>
                 <caption>Created using bolt-cep and Live2dOnWeb</caption>
-                <p>My first Illustrator plugin was a port of live2d web display inside of an Illustrator panel. It doesn't do much other than follow the mouse and delver generic phrases but this is perfect decoration for any vocaliod fan</p>
+                <p>My first Illustrator plugin was a port of live2d web display inside of an Illustrator panel. It doesn't do much other than follow the mouse and deliver generic phrases but this is perfect decoration for any vocaliod fan</p>
             </>)},
         ]},
     ]},

@@ -240,7 +240,7 @@ function App() {
             {/* project selection */}
             <div style={{float:"left", padding:"0 0px", width:"90%"}}>
             <div id="menu" style={{float:"left", padding:"0 0px", width:"33%"}}>
-                <Parallax shouldAlwaysCompleteAnimation={true} translateY={[-0.5, 382]}  className='txtBox' style={{margin:"5pt"}} >
+                <Parallax shouldAlwaysCompleteAnimation={true} translateY={[-0.5, 600]}  className='txtBox' style={{margin:"5pt"}} >
                     {mediums.map ((medium)=>
                     {
                         return (<>

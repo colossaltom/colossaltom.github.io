@@ -192,7 +192,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  width: min(100% - 32px, 1200px);
+  width: min(100% - 0px, 1200px);
   margin-inline: auto;
 }
 
